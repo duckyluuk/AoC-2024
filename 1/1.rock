@@ -1,0 +1,42 @@
+rock blist
+rock clist
+rock comb blist, clist
+while 1
+listen to line
+if it is nothing
+break it down
+
+cut line with "   "
+for l in comb
+cast roll line into x with 10
+q = l at x
+l at x = q and q+1 or 1
+
+
+rock sortb
+for n and idx in blist 
+while n
+n = n-1
+rock sortb idx
+
+
+rock sortc
+for n and idx in clist
+while n
+n = n-1
+rock sortc idx
+
+
+res1 = 0
+res2 = 0
+join sortc into cstr with " "
+for n and idx in sortb
+if n>sortc at idx
+res1 = res1+n-sortc at idx
+else
+res1 = res1-n+sortc at idx
+
+nstr = n+""
+res2 = res2+cstr/nstr*n
+
+say res1+" "+res2
