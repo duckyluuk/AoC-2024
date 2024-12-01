@@ -22,3 +22,8 @@ This year I will also be solving as many problems as I can in [Rockstar](https:/
 ## Previous Years
 - [2023](https://github.com/duckyluuk/AoC-2023)
 - [2022](https://github.com/duckyluuk/AoC-2022)
+
+## Rockstar Songs
+For this year's rockstar solutions, I will be publishing AI generated songs based on the "lyrics" for each completed solution.
+
+- [Day 1](https://youtu.be/mrUzmqptpGo)
