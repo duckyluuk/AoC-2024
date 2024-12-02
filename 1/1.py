@@ -2,12 +2,10 @@
 import sys
 sys.path.append('../AOC-2024')
 
-# util imports
 from utils.readfile import *
 from utils.calc import *
 from utils.graph import *
 from utils.util import *
-# lib imports
 import re
 import math
 import copy
@@ -16,7 +14,7 @@ from itertools import combinations, permutations, product
 import re
 import time
 
-# input parsing
+
 lns = to_nums([x.split() for x in read_lines_list("1")])
 
 print(*zip(*lns))
