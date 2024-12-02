@@ -27,3 +27,4 @@ This year I will also be solving as many problems as I can in [Rockstar](https:/
 For this year's rockstar solutions, I will be publishing AI generated songs based on the "lyrics" for each completed solution.
 
 - [Day 1](https://youtu.be/mrUzmqptpGo)
+- [Day 2](https://youtu.be/w-lMqec-1GM)
