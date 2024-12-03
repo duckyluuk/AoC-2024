@@ -17,8 +17,6 @@ import time
 
 lns = to_nums([x.split() for x in read_lines_list("1")])
 
-print(*zip(*lns))
-
 start_time = time.time()
 
 
