@@ -1,47 +1,35 @@
-isnum wants num
-val = num
-cut it
-for x in val
-if x < "0" or x > "9"
-give 0
+the grid is empty
+until it is really nothing
+the grid is with it + " "
+listen to the music
 
-
-cast num with 10
-give num
-
-
-solve takes the line
-test = the line
-n = 0
-res = 0
-cut the line with "mul("
-roll it
-for x in the line
-cut x with ")"
-x = roll x
-cut x with ","
-if x = 2
-num = 1
-num = num * isnum taking x at 0
-num = num * isnum taking x at 1
-res = res + num
-
+slice takes pos, step, num
+res is empty
+while num
+knock num down
+res is with the grid at pos
+pos is with step
 
 give res
 
+cut the grid
+rock dirs 1, 140, 141, 142
+rock locs 140, 142
+n = 0
+m = 0
+for val and idx in the grid
+for x in dirs
+row = slice taking idx, x, 4
+n is with row = "XMAS" or row = "SAMX"
 
-something = 1
-while it isnt silent
-the input is with it
-listen to something
+c = 2
+for x in locs
+v = idx - x
+row = slice taking v, x, 3
+c is without row = "MAS" or row = "SAM"
+
+if c = 0
+m = m+1
 
 
-say solve taking the input
-final = 0
-cut the input with "do()"
-for x in the input
-cut x with "don't()"
-v = x at 0
-final is with solve taking v
-
-say final
+say n + " " + m
