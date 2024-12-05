@@ -1,0 +1,54 @@
+p1 = 0
+p2 = 0
+loops = 2
+while loops
+ listen to line
+ if line is empty
+  knock loops down
+  take me to the top
+
+ if line at 6 is nothing
+  shatter line with "|"
+  rock rules with line
+  continue
+
+ shatter line with ","
+ swaps = 0
+ while 1
+  split empty into problem
+  cut silence into row
+  for v and idx in line
+   row at v = idx
+
+  for rule in rules
+   b = rule at 0
+   c = rule at 1
+   b = row at b
+   c = row at c
+   if b and c arent mysterious
+    if b > c
+     rock problem b, c
+     break it down, ooh
+
+  if problem = 0
+   break it down
+   
+  b = problem at 0
+  c = problem at 1
+  swaps = 1
+  tmp = line at b
+  line at b = line at c
+  line at c = tmp
+
+ idx = line / 2
+ turn down idx
+ val = line at idx
+ cast it with 10
+ p1 = p1 + val
+ if swaps
+  p1 = p1 - val
+  p2 = p2 + val
+oh yeah
+
+say p1
+say p2
