@@ -1,0 +1,55 @@
+rock dirs -131,1,131,-1
+grid is silent
+until it is really nothing
+ grid is with it
+ if it
+  it is with " "
+
+listen to the music
+
+cut grid into lst
+solve takes check
+ rock seen
+ rock path
+ pos = grid
+ cut it with "^"
+ cut it at 0 into it
+ it = it / 1
+ dir = 0
+ while 1
+  key = dir + " " + pos
+  if seen at key and check > -1
+   give 0
+
+  if pos < 0 or pos >= lst/1 or grid at pos = " "
+   give path
+
+  if grid at pos = "#" or pos = check
+   pos = pos - dirs at dir
+   dir = dir + 1
+   if dir = 4
+    dir = 0, oh
+  else
+   seen at key = 1
+   rock path pos
+   pos = pos + dirs at dir
+
+
+
+path = solve taking -1
+rock visited
+rock uniqpath
+for x in path
+ if not visited at x
+  visited at x = 1
+  rock uniqpath with x
+
+
+say uniqpath / 1
+n = 0
+for p in uniqpath
+ if not solve taking p / 1
+  n = n+1
+
+
+say n
