@@ -70,3 +70,6 @@ for update in updates:
 
 
 print(n)
+
+
+print("took %s seconds" % (time.time() - start_time))

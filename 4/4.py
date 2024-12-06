@@ -43,3 +43,6 @@ for i in range(width, len(grid) - width - 1):
         n += (m in ["MS", "SM"]) and l in ["MS", "SM"]
 
 print(n)
+
+
+print("took %s seconds" % (time.time() - start_time))
