@@ -29,7 +29,6 @@ for y in range(50):
         if grid[y][x] != ".":
             points[grid[y][x]] = points.get(grid[y][x], []) + [(x, y)]
 
-print(points)
 
 
 print("PART 1:")

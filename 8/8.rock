@@ -1,0 +1,55 @@
+rock points
+y = 0
+while true
+ listen to line
+ if not line
+  break
+
+ split line
+ for cell and x in line
+  burn silence into pos
+  rock pos x, y
+  if cell != "."
+   x = points at cell
+   rock x pos
+   points at cell = x
+
+ 
+ y = y+1
+
+test = 0
+while test < 2
+ for curpoints of points
+  for p1 in curpoints
+   for p2 in curpoints
+    if p1 != p2 
+     x1 = p1 at 0
+     y1 = p1 at 1
+     x2 = p2 at 0
+     y2 = p2 at 1
+     xdis = x2 - x1
+     ydis = y2 - y1
+     if not test
+      x1 = x1-xdis
+      y1 = y1-ydis
+
+     while x1>=0 and y1>= 0 and x1 < 50 and y1 < 50
+      burn silence into pos
+      rock pos x1, y1
+      uniq at pos = 1
+      if not test
+       break
+
+      x1 = x1-xdis
+      y1 = y1-ydis
+
+
+
+
+
+ n = 0
+ for v of uniq
+  n = n+1
+
+ say n
+ build test up

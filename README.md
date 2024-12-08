@@ -33,3 +33,4 @@ For this year's rockstar solutions, I will be publishing AI generated songs base
 - [Day 5](https://youtu.be/TkAg9HrpGWc)
 - [Day 6](https://youtu.be/goFwjuJg8qI)
 - [Day 7](https://youtu.be/o-HCagXnqc8)
+- [Day 8](https://youtu.be/ZbV8wVI0bKU)
