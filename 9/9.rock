@@ -1,0 +1,97 @@
+listen to data
+
+solve takes part2
+ x = 0
+ while x < 10
+  rock gaps at x
+  build x up
+ end
+ pos = 0
+ b_id = 0
+ burn data
+ for size and idx in data
+  size = size - 48
+  if size
+   if idx at 0 = 0
+    if part2
+     cur = pos
+     rock cur with b_id, size
+     rock blocks with cur
+    else
+     x = 0
+     while x < size
+      cur = pos + x
+      rock cur with b_id, 1
+      rock blocks with cur
+      build x up
+     end
+    end
+    build b_id up
+   else
+    if part2
+     rock pos into gaps at size
+    else
+     x = 0
+     while x < size
+      cur = pos + x
+      rock gaps at 1 cur
+      build x up
+     end
+    end
+   end
+  end
+  pos = pos+size
+ end
+ checksum = 0
+ b = blocks / 1
+ while b
+  knock b down
+  block = blocks at b
+  bpos = block at 0
+  bid = block at 1
+  bsize = block at 2
+  bestpos = bpos
+  gpos = 999999
+  glen = 0
+  for curgaps and x in gaps
+   curgaps = gaps at x
+   if curgaps != 0 and x >= bsize
+    if curgaps at 0 < gpos
+     gpos = curgaps at 0
+     glen = x
+    end
+   end
+  end
+  if glen
+   if gpos < bpos
+    bestpos = gpos
+    temp = gaps at glen
+    roll temp
+    if part2
+     cur = glen - bsize
+     old = gaps at cur
+     val = gpos + bsize
+     cut "" into new
+     prev = 0
+     for item in old
+      if prev <= val and val < item
+       rock new val
+      end
+      rock new item
+      prev = item
+     end
+     gaps at cur = new
+    end
+   end
+   blocks at b at 0 = bestpos
+  end
+  additional = 2*bestpos + bsize - 1
+  additional = additional * bid * bsize
+  additional = additional / 2
+  turn it down
+  checksum = checksum + additional
+ end
+end
+
+say solve taking 0
+say solve taking 1
