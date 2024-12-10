@@ -1,0 +1,44 @@
+pos = 0
+while 1
+ listen to line
+ if not line
+  break
+ end
+ for char and idx in line
+  cast char with 10
+  char = char + 1
+  grid at pos = char
+  pos = pos+1
+ end
+ pos = pos+1
+end
+rock dirs 1, -1, 46, -46
+count takes loc, height
+ if grid at loc = height
+  if height = 10
+   if part or not seen at loc
+    seen at loc = 1
+    give 1
+   end
+  end
+  tot = 0
+  for d in dirs
+   pos = loc+d
+   if grid at pos
+    h = height + 1
+    tot = tot + count taking pos, h
+   end
+  end
+  give tot
+ end
+end
+for part in 2
+ tot = 0
+ for test and loc in grid
+  cut empty into seen
+  if test = 1
+   tot = tot + count taking loc, 1
+  end
+ end
+ say tot
+end
