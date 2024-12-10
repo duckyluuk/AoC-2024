@@ -1,4 +1,7 @@
 # graph node
+import time
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -20,11 +23,14 @@ class Graph:
         self.nodes.append(node)
 
     def add_edge(self, node1, node2, weight=1, directed=False):
+        if (node1, node2) not in self.edges:
+            node1.add_adjacency(node2)
         self.edges[(node1, node2)] = weight
-        node1.add_adjacency(node2)
         if not directed:
+            if (node2, node1) not in self.edges:
+                node2.add_adjacency(node1)
             self.edges[(node2, node1)] = weight
-            node2.add_adjacency(node1)
+            
     
     def remove_node(self, node):
         self.nodes.remove(node)
