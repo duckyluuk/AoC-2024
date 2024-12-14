@@ -1,0 +1,41 @@
+calc takes stone
+ str_stone = stone + ""
+ cut str_stone into len
+ len = len / 1
+ if stone = 0
+  give "1"
+ end
+ if len at 0
+  val = stone * 2024 + ""
+  rock ret val
+  give ret
+ end
+ left = str_stone / 2 + ""
+ righ = str_stone / -2 * -1 + ""
+ rock ret left, righ
+ give ret
+end
+
+rock stones
+listen to line
+cut line with " "
+for x in line
+ stones at x = 1
+end
+
+for x in 75
+ cut "" into new
+ total = 0
+ for cnt and stone of stones
+  cast stone with 10
+  for res in calc taking stone
+   value = new at res or 0
+   new at res = value + cnt
+   total = total + cnt
+  end
+ end
+ stones = new
+ if x is 24 or x is 74
+  say total
+ end
+end
