@@ -1,4 +1,5 @@
 import math
+import re
 
 
 # convert any list to a list of numbers (works for nested lists too)
@@ -7,6 +8,9 @@ def to_nums(lst, convert=int):
         return [to_nums(x, convert) for x in lst]
     else:
         return convert(lst)
+    
+def force_nums(lst):
+    return to_nums(lst, convert=lambda x:list(map(int,re.findall(r"-?\d+", x))))
     
 # average of list
 def avg(lst):
